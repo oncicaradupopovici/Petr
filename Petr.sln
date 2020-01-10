@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29613.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{32500330-CEC1-4D6B-987E-C7B021E95F4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tracking", "Tracking", "{52E5F5E0-3723-4C9B-8CF7-B976694CCD64}"
+EndProject
+Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Petr.Tracking", "src\Tracking\Petr.Tracking\Petr.Tracking.fsproj", "{29858A7D-3A28-4CE4-9412-1DD73749CE46}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{29858A7D-3A28-4CE4-9412-1DD73749CE46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{29858A7D-3A28-4CE4-9412-1DD73749CE46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{29858A7D-3A28-4CE4-9412-1DD73749CE46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{29858A7D-3A28-4CE4-9412-1DD73749CE46}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{52E5F5E0-3723-4C9B-8CF7-B976694CCD64} = {32500330-CEC1-4D6B-987E-C7B021E95F4C}
+		{29858A7D-3A28-4CE4-9412-1DD73749CE46} = {52E5F5E0-3723-4C9B-8CF7-B976694CCD64}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A513799E-F7D9-40F1-86A6-553117D93AB1}
+	EndGlobalSection
+EndGlobal
