@@ -63,13 +63,30 @@ module TransactionAggregate =
         | Debit of DebitTransactionMethod
         | Credit of CreditTransactionMethod
 
-    
-    type Transaction = {
-        TransactionId: TransactionId
+    type TransactionData = {
         Account: AccountNo
         Amount: decimal
         Date: DateTime
-        Type: TransactionType
-        TrackingMonthId: Shared.TrackingMonthId
     }
+    
+    type Transaction = {
+        TransactionId: TransactionId
+        Data: TransactionData
+        Type: TransactionType
+        Month: Shared.TrackingMonthId
+    }
+
+    type DomainEvent = 
+        | TransactionAdded of Transaction
+        | BankAccountAdded of BankAccount
+
+    type AddBankTransfer = TransactionData -> BankTransferInfo -> Transaction
+    let addBankTransfer: AddBankTransfer =
+        fun transactionData bankTransfer ->
+            {
+                TransactionId = TransactionId (Guid.NewGuid())
+                Data = transactionData
+                Type = Debit (BankTransfer bankTransfer)
+                Month = Shared.TrackingMonthId 1
+            }
     
